@@ -51,8 +51,8 @@ def rootLogLikelihoodRatio(frenqA, frenqB, totalA, totalB):
 
 
 base_path = "D://document_parses/pdf_json/"
-ficheros_path = "./dir//ficheros.txt"
-path_result = ".\dir\\resultado.txt"
+ficheros_path = "./dir/ficheros.txt"
+path_result = "./dir/resultado.txt"
 
 extraer_datos_covit(base_path, ficheros_path, path_result)
 
@@ -61,7 +61,7 @@ dict_covit = extraer_datos_count(path_result)
 print( "Fichero covit leido " )
 
 
-path_norvig = ".\dir\count_1w.txt"
+path_norvig = "./dir/count_1w.txt"
 
 dict_norvig = extraer_datos_count(path_norvig)
 print( "Fichero norvig leido ")
@@ -88,7 +88,7 @@ print("Total norvig calculado " )
 
 print("Fichero analizado ")
 
-path_result_Root = ".\dir\\resultadoRoot.txt"
+path_result_Root = "./dir/resultadoRoot.txt"
 
 
 finalFrequency = {}
