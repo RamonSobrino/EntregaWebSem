@@ -57,23 +57,23 @@ path_result = ".\dir\\resultado.txt"
 extraer_datos_covit(base_path, ficheros_path, path_result)
 
 
-dict_reddit = extraer_datos_count(path_result)
+dict_covit = extraer_datos_count(path_result)
 print( "Fichero covit leido " )
 
 
 path_norvig = ".\dir\count_1w.txt"
 
 dict_norvig = extraer_datos_count(path_norvig)
-print( "Fichero norvig leido " )
+print( "Fichero norvig leido ")
 
 
-dict_reddit_list = dict_reddit.keys()
+dict_covit_list = dict_covit.keys()
 
-total_reddit = 0
+total_covit = 0
 
-for words in dict_reddit_list:
-    total_reddit += int( dict_reddit[words])
-print( "Total covit calculado " )
+for words in dict_covit_list:
+    total_covit += int(dict_covit[words])
+print( "Total covit calculado ")
 
 
 dict_norvig_list = dict_norvig.keys()
@@ -83,7 +83,7 @@ total_norvig = 0
 for words in dict_norvig_list:
     total_norvig += int(dict_norvig[words])
 
-print( "Total norvig calculado " )
+print("Total norvig calculado " )
 
 
 print("Fichero analizado ")
@@ -94,9 +94,9 @@ path_result_Root = ".\dir\\resultadoRoot.txt"
 finalFrequency = {}
 
 
-for words in dict_reddit_list:
+for words in dict_covit_list:
     if words in dict_norvig_list:
-        finalFrequency[words] = rootLogLikelihoodRatio( dict_reddit[words], dict_norvig[words], total_reddit, total_norvig)
+        finalFrequency[words] = rootLogLikelihoodRatio(dict_covit[words], dict_norvig[words], total_covit, total_norvig)
 
 print("Diccionario formado ")
 
