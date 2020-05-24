@@ -2,6 +2,8 @@
 
 from Util import leer_resultados
 
+import Constant
+
 import requests
 '''
     Entidades de medicamentos:
@@ -17,7 +19,7 @@ def ejercicio3(max_terminos):
 
     resultado =[]
 
-    lista_palabras = leer_resultados("./dir/resultadoRoot.txt")
+    lista_palabras = leer_resultados(Constant.PATH_RESULT_ROOT)
 
     lista_palabras.keys()
 
@@ -72,8 +74,7 @@ print("Inicio Ejercicio 3")
 resultado = ejercicio3(3000)
 
 print("Diccionario ordenado ")
-path_result_Root = "./dir/resultadoEjercicio3.txt"
 
-with open(path_result_Root, 'w') as rh:
+with open(Constant.PATH_RESULT_EJ3, 'w') as rh:
     for word in resultado:
         rh.write( "{0}\n".format(word))

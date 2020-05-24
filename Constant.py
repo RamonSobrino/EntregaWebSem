@@ -8,3 +8,5 @@ PATH_RESULT_ROOT = "./dir/resultadoRoot.txt"
 CORRELATIONS_FILE = "./dir/correlations.txt"
 PATH_RESULT = "./dir/resultado.txt"
 PATH_NORVIG = "./dir/count_1w.txt"
+PATH_RESULT_EJ3 = "./dir/resultadoEjercicio3.txt"
+
