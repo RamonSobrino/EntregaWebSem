@@ -52,6 +52,18 @@ def escribir_resultados(path_result, frequency):
         for words in frequency_list:
             rh.write(str(words) + " " + str(frequency[words]) + "\n")
 
+def leer_resultados(path_result):
+    frequency = {}
+
+    with open( path_result, 'rb' ) as fh:
+        lines = fh.readlines()
+
+        for line in lines:
+            apartados = line.split()
+            frequency[str(apartados[0])[2:-1]] = str(apartados[1]).encode("utf-8")
+
+    return frequency
+
 
 def ls1(path):
     return [obj for obj in listdir(path) if isfile(path + obj)]
